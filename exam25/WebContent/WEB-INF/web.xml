@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>exam25</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>TenServlet</display-name>
+    <servlet-name>TenServlet</servlet-name>	<!--3) 찾았다. -->
+    <servlet-class>exam.TenServlet</servlet-class>	<!-- 4) 실제 class인 exam이라는 패키지 안에 있는 TenServlet을 실행시키라는 의미를 가진다.-->
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TenServlet</servlet-name>	<!-- 2) <servlet> 태그 안에서 servlet-name이 같은 servlet을 찾는다. -->
+    <url-pattern>/ten</url-pattern> <!-- 1) 이러한 url로 요청을 하게 되면 (만약 이 url를 찾지 못한다면 404가 뜬다.) -->
+  </servlet-mapping>
+</web-app>
